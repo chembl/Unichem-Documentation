@@ -8,4 +8,5 @@
 * [Submission of data to UniChem](submission-of-data-to-unichem.md)
 * [Downloads](downloads.md)
 * [Mappings](mappings.md)
+* [Connectivity Labels](connectivity-labels.md)
 
