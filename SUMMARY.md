@@ -6,4 +6,5 @@
 * [Rules for Loading](rules-for-loading.md)
 * [Citing UniChem](citing-unichem.md)
 * [Submission of data to UniChem](submission-of-data-to-unichem.md)
+* [Downloads](downloads.md)
 
