@@ -9,4 +9,6 @@
 * [Downloads](downloads.md)
 * [Mappings](mappings.md)
 * [Connectivity Labels](connectivity-labels.md)
+* [Analysis](analysis.md)
+* [Getting in touch](getting-in-touch.md)
 
