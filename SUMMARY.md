@@ -12,4 +12,5 @@
 * [Analysis](analysis.md)
 * [Getting in touch](getting-in-touch.md)
 * [Webservices](webservices.md)
+* [Glossary of Terms](glossary-of-terms.md)
 
