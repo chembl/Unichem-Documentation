@@ -2,37 +2,7 @@
 
  Background, rationale and discussion of Connectivity Searching is published here: [http://www.jcheminf.com/content/6/1/43](http://www.jcheminf.com/content/6/1/43)
 
- Here, full documentation on Connectivity Search is shown. Some of this information is not included in the above publication either because the detail may change over time, or the level of technical detail was not relevant for the Journal.  
-
-
-####  Contents
-
-  
-   1 [Introduction](https://www.ebi.ac.uk/unichem/info/widesearchInfo#Introduction)  
-   2 [Query Construction](https://www.ebi.ac.uk/unichem/info/widesearchInfo#QueryConstruction)  
-   3 [Search Terms](https://www.ebi.ac.uk/unichem/info/widesearchInfo#SearchTerms)  
-             3.1 [General](https://www.ebi.ac.uk/unichem/info/widesearchInfo#GeneralST)  
-             3.2 ['key\_search' Search Terms](https://www.ebi.ac.uk/unichem/info/widesearchInfo#key_searchSearchTerms)  
-             3.3 ['cpd\_search' Search Terms](https://www.ebi.ac.uk/unichem/info/widesearchInfo#cpd_searchSearchTerms)  
-   4 [Search Criteria A-H](https://www.ebi.ac.uk/unichem/info/widesearchInfo#SearchCriteriaA-H)  
-             4.1 [General](https://www.ebi.ac.uk/unichem/info/widesearchInfo#GeneralSC)  
-             4.2 [A. Sources](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critA)  
-             4.3 [B. Pattern](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critB)  
-             4.4 [C. Component Mapping](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critC)  
-             4.5 [D. Frequency Block](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critD)  
-             4.6 [E. InChI Length Block](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critE)  
-             4.7 [F. UniChem Labels](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critF)  
-             4.8 [G. Assignment Status](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critG)  
-             4.9 [H. Data Structure](https://www.ebi.ac.uk/unichem/info/widesearchInfo#critH)  
-   5 [Multiple Component InChIs.](https://www.ebi.ac.uk/unichem/info/widesearchInfo#MultipleComponentInChIs)  
-   6 [Avoiding excessively large Result sets.](https://www.ebi.ac.uk/unichem/info/widesearchInfo#AvoidLargeResultSets)  
-   7 [Multiply assigned src\_compound\_ids](https://www.ebi.ac.uk/unichem/info/widesearchInfo#MultiplyAssignedIds)  
-   8 [Querying with InChIKeys that do not exist in UniChem](https://www.ebi.ac.uk/unichem/info/widesearchInfo#InChIKeysNoExist)  
-   9 [Working within the constraints of Standard InChI](https://www.ebi.ac.uk/unichem/info/widesearchInfo#WorkingwithintheconstraintsofStandardInChI)  
-  
-  
-  
-
+ Here, full documentation on Connectivity Search is shown. Some of this information is not included in the above publication either because the detail may change over time, or the level of technical detail was not relevant for the Journal.
 
 #### Section 1  Introduction
 
