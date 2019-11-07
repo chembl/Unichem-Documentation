@@ -1,21 +1,20 @@
 # Webservices
 
-### RESTful Web Service API.
+Using the UniChem web service API users can retrieve data from the UniChem database in a programmatic fashion. This page documents the currently supported functionality and defines the expected inputs and outputs of each method, together with examples for each one \(which may be tested most simply by pasting into a browser, or using an open source tool such as [RESTClient from WizTools](http://www.wiztools.org/) \). 
 
-Using the UniChem web service API users can retrieve data from the UniChem database in a programmatic fashion. This page documents the currently supported functionality and defines the expected inputs and outputs of each method, together with examples for each one \(which may be tested most simply by pasting into a browser, or using an open source tool such as [RESTClient from WizTools](http://www.wiztools.org/) \). Please note that although that wherever possible small data sets are used in the examples, occassionally the only examples possible are with larger sets, which may take some time to retrieve \(such as the auxiliary mapping method\). In order to help you get started, we have provided some example cURL requests \(below\). Note that for small, ad hoc queries, users should consider simply using the [Home / Search](https://www.ebi.ac.uk/unichem/) page.
+Please note that although that wherever possible small data sets are used in the examples, occassionally the only examples possible are with larger sets, which may take some time to retrieve \(such as the auxiliary mapping method\). In order to help you get started, we have provided some example cURL requests \(below\). Note that for small, ad hoc queries, users should consider simply using the [Home / Search](https://www.ebi.ac.uk/unichem/) page.
 
  For whole source mapping, users are strongly advised to simply download the pre-generated mappings as gzip files from the [downloads site](https://www.ebi.ac.uk/unichem/info/downloads) instead, rather than use the web services mapping method described below.  
 
 
-#### Constructing Queries.
+## Constructing Queries.
 
 All RESTful queries are constructed using the following 'stem' or 'base' url:  
 https://www.ebi.ac.uk/unichem/rest/   
 
 Specific query urls are all constructed by adding a method name to this base url, followed by input data, as shown in the API methods section below.
 
- Input data may consist of three types...       
-src\_compound\_id  
+ Input data may consist of three types...     src\_compound\_id  
      src\_id  
      InChIKey  
 
@@ -29,16 +28,12 @@ src\_compound\_id
  Note also that src-compound\_ids are treated in a case-sensitive manner throughout UniChem \(see [here](https://www.ebi.ac.uk/unichem/info/inputFormats) for formatting information on search terms\).  
 
 
-#### Content Negotiation.
+## Content Negotiation.
 
  The default data serialization method is JSON. However, alternative content types are available \(eg: XML\). These may be selected by the user by specifying the content type HTTP Accept header \(eg: 'text/xml' for XML\). JSONP may be returned without specifying an Accept header, but by simply appending '?callback=xyz' to the request\_url \(where 'xyz' is defined by the user\). In this case, the returned object will then have the form of... xyz\(serializedJSON\). See examples at the foot of this page.  
 
 
-#### Error Codes.
-
-  
-  
-Show entriesApply filter:  ...to whole table
+## Error Codes.
 
 | HTTP Response Code | Summary | Description |
 | :--- | :--- | :--- |
@@ -53,7 +48,7 @@ Showing 1 to 4 of 4 entriesFirstPrevious1NextLast
   
 
 
-#### Methods.
+## Methods.
 
 1. [Get src\_compound\_ids from src\_compound\_id](https://www.ebi.ac.uk/unichem/info/webservices#GetSrcCpdIds)
 2. [Get src\_compound\_ids all from src\_compound\_id](https://www.ebi.ac.uk/unichem/info/webservices#GetSrcCpdIdsAll)
@@ -262,36 +257,46 @@ src\_compound\_id \(a list of src\_compound\_ids from this source which are curr
   
 
 
-#### Example cURL requests
+## Example cURL requests
 
 The example cURL requests illustrate how the web services may be queried programmatically. In each case, the cURL request is shown, then the retrieved data.  
   
 **Example 1: Retrieve Source information**
 
-Retrieve information relating to the source 'ChEMBL' \(src\_id = 1\). Note that JSON is returned \(the default serialization method\).
+Retrieve information relating to the source 'ChEMBL' \(src\_id = 1\). Note that JSON is returned \(the default serialization method\). 
 
+```text
+curl https://www.ebi.ac.uk/unichem/rest/sources/1
+[{"name":"chembl","description":"A database of bioactive drug-like small molecules and associated bioactivities abstracted from the scientific literature","name_long"  :"ChEMBL","base_id_url":"https://www.ebi.ac.uk/chembldb/compound/inspect/","src_id":"1","aux_for_url":"0","base_id_url_available":"1","name_label":"ChEMBL","src_url":"https://www.ebi.ac.uk/chembl/"}]
 
-
-curl https://www.ebi.ac.uk/unichem/rest/sources/1  
-\[{"name":"chembl","description":"A database of bioactive drug-like small molecules and associated bioactivities abstracted from the scientific literature","name\_long"  :"ChEMBL","base\_id\_url":"https://www.ebi.ac.uk/chembldb/compound/inspect/","src\_id":"1","aux\_for\_url":"0","base\_id\_url\_available":"1","name\_label":"ChEMBL","src\_url":
-
-    "https://www.ebi.ac.uk/chembl/"}\]
-
-  
-
+```
 
 **Example 2: Retrieve Structure Information**
 
 Retrieve the structure currently assigned to CHEMBL12 \(from src\_id = 1\). Note that JSON is returned \(the default serialization method\).
 
-* 
+```text
+curl https://www.ebi.ac.uk/unichem/rest/structure/CHEMBL12/1
+[{"standardinchikey":"AAOVKJBEBIDNHE-UHFFFAOYSA-N","standardinchi":"InChI=1S/C16H13ClN2O/c1-19-14-8-7-12(17)9-13(14)16(18-10-15(19)20)11-5-3-2-4-6-11/h2-9H,10H2,1H3"}]
+```
+
 **Example 3: Retrieve JSONP**
 
 Retrieve the structure currently assigned to CHEMBL12 \(from src\_id = 1\), as per example 2, but append a callback to return JSONP.
 
-* 
+```text
+curl https://www.ebi.ac.uk/unichem/rest/structure/CHEMBL12/1?callback=xyz
+xyz([{"standardinchikey":"AAOVKJBEBIDNHE-UHFFFAOYSA-N","standardinchi":"InChI=1S/C16H13ClN2O/c1-19-14-8-7-12(17)9-13(14)16(18-10-15(19)20)11-5-3-2-4-6-11/h2-9H,10H2,1H3"}]);
+```
+
 **Example 4: Retrieve XML**
 
 Retrieve the structure currently assigned to CHEMBL12 \(from src\_id = 1\), as per example 2, but set the 'Accept Header' to return XML.
 
-* 
+```text
+curl -H "Accept: text/xml" -H "Content-Type: text/xml" https://www.ebi.ac.uk/unichem/rest/structure/CHEMBL12/1
+<opt\>
+  <data standardinchi="InChI=1S/C16H13ClN2O/c1-19-14-8-7-12(17)9-13(14)16(18-10-15(19)20)11-5-3-2-4-6-11/h2-9H,10H2,1H3" standardinchikey="AAOVKJBEBIDNHE-UHFFFAOYSA-N" />
+<opt\>
+```
+
