@@ -2,13 +2,13 @@
 
 ### **Auxiliary Data Mappings**
 
-Most sources within UniChem create URLs for compound specific pages by simply appending a src\_compound\_id to a ‘base URL’
+Most sources within UniChem create URLs for compound specific pages by simply appending a src\_compound\_id to a ‘base URL’.
 
-For example, appending the ChEMBL src\_compound\_id 'CHEMBL59' onto 'https://www.ebi.ac.uk/chembldb/compound/inspect/' will give... 'https://www.ebi.ac.uk/chembldb/compound/inspect/CHEMBL59', the compound-specific page in ChEMBL for this compound.
+For example, appending the ChEMBL src\_compound\_id **'CHEMBL59'** onto 'https://www.ebi.ac.uk**/chembldb/compound/inspect/'** will give **https://www.ebi.ac.uk/chembldb/compound/inspect/CHEMBL59'**, the compound-specific page in ChEMBL for this compound.
 
 However, some instances of UniChem may contain sources that create URLs for compound-specific pages by using strings or identifiers \(called 'auxiliary data' here\) that are different to the src\_compound\_ids for the source. This is not very common, but is dealt with in UniChem by use of an additional mapping step for these sources, which can be achieved on this page.
 
-Currently there is only '1' source in UniChem with auxiliary data, shown in dropdown list below. Select the source, then hit 'Map' to retrieve the mapping of all current src\_compound\_ids from this source to corresponding auxiliary data for these src\_compound\_ids.
+Currently there is only 1 source in UniChem with auxiliary data.
 
 ### Whole Source Mappings
 
