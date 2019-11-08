@@ -1,14 +1,16 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Rules for Loading](rules-for-loading.md)
-* [Submission of data to UniChem](submission-of-data-to-unichem.md)
+* [Formatting of input data for UniChem queries.](formatting-of-input-data-for-unichem-queries..md)
 * [Downloads](downloads.md)
-* [Mappings](mappings.md)
+* [Mappings](mappings/README.md)
+  * [What does the option 'Include non-mapped src\_compound\_ids' mean with respect to whole source mapping](mappings/what-does-the-option-include-non-mapped-src_compound_ids-mean-with-respect-to-whole-source-mapping.md)
 * [Analysis](analysis.md)
 * [Webservices](webservices.md)
 * [Connectivity Search Documentation](connectivity-search-documentation/README.md)
   * [Connectivity Labels](connectivity-search-documentation/connectivity-labels.md)
+* [Rules for Loading](rules-for-loading.md)
+* [Submission of data to UniChem](submission-of-data-to-unichem.md)
 * [Getting in touch](getting-in-touch.md)
 * [Citing UniChem](citing-unichem.md)
 * [FAQs](faqs.md)
@@ -16,5 +18,4 @@
   * [What is an Assignment?](definitions/what-is-an-assignment.md)
   * [Glossary of Terms](definitions/glossary-of-terms.md)
   * [What is meant by a 'src\_id' and a 'src\_compound\_id' in UniChem ?](definitions/what-is-meant-by-a-src_id-and-a-src_compound_id-in-unichem.md)
-* [Formatting of input data for UniChem queries.](formatting-of-input-data-for-unichem-queries..md)
 
