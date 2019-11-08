@@ -6,7 +6,6 @@ When running a '[Connectivity-based search](https://www.ebi.ac.uk/unichem/widese
 
 | Label | Description | FIKHB |
 | :--- | :--- | :--- |
-| Label | Description | FIKHB |
 | BF4 |  | ODGCEQLVLXJUCC |
 | C2H2O4 |  | MUBZPKHOEPUJKR |
 | C2H4O2 |  | QTBSBXVTEAMEQO |

@@ -36,7 +36,6 @@ Note also that src-compound\_ids are treated in a case-sensitive manner througho
 
 | HTTP Response Code | Summary | Description |
 | :--- | :--- | :--- |
-|  |  |  |
 | 200 | OK | The request to the web service completed successfully. This includes valid requests that happen to return empty data sets. |
 | 400 | Bad Request | The parameters passed to the API endpoint were deemed invalid. This response will be returned for... 1. Invalid API method names, or 2. Valid method names with invalid numbers of parameters, or 3. InChIKeys which do not match the pattern of a Standard InChIKey version 1 |
 | 404 | Not Found | The resource corresponding to the supplied parameters does not exist. This response will be returned if the inputted data type \(src\_compound\_id, src\_id, or InChIKey matching the pattern of a Standard InChIKey version 1\) does not exist in UniChem. |

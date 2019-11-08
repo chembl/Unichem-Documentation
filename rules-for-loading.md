@@ -6,7 +6,6 @@
 
 | Rule | Description |
 | :--- | :--- |
-|  |  |
 | 1 | There is a mis-match between the InChI and the InChIkey. \(\*\) |
 | 2 | The source does not provide a Standard InChI. \(\*\*\) |
 | 3 | UniChem cannot generate an InChIkey from the Standard InChI provided by the source. |
